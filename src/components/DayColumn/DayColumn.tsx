@@ -69,7 +69,6 @@ export function DayColumn({
         </SortableContext>
       </div>
       </div>
-
     </div>
   );
 }

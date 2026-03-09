@@ -1,4 +1,4 @@
-import type { DragCollision } from '@dnd-kit/core';
+import type { Collision } from '@dnd-kit/core';
 import { pointerWithin } from '@dnd-kit/core';
 
 /**
@@ -7,7 +7,7 @@ import { pointerWithin } from '@dnd-kit/core';
  */
 export function sortablePreferredCollision(
   args: Parameters<typeof pointerWithin>[0]
-): DragCollision[] {
+): Collision[] {
   const collisions = pointerWithin(args);
   if (!collisions.length) return collisions;
   return [...collisions].sort((a, b) => {
